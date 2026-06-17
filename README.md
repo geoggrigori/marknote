@@ -1,5 +1,7 @@
 ![marknote](assets/banner.svg)
 
+[![CI](https://github.com/geoggrigori/marknote/actions/workflows/ci.yml/badge.svg)](https://github.com/geoggrigori/marknote/actions/workflows/ci.yml)
+
 ![screenshot](assets/screenshot.png)
 
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)](https://react.dev)
