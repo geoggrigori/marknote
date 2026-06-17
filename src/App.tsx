@@ -52,6 +52,7 @@ function App() {
               <Editor
                 value={selected.body}
                 onChange={(body) => edit(selected.id, body)}
+                filename={selected.title}
               />
               <Preview source={selected.body} />
             </div>
