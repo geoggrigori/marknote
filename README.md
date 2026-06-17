@@ -21,6 +21,8 @@ saved automatically in your browser. No accounts, no backend — just your notes
 - 📝 **Live preview** — Markdown is rendered as you type, side by side with the editor.
 - 🗂️ **Note management** — create, select, edit, and delete notes from the sidebar.
 - 🔍 **Full-text search** — instantly filter notes by title or body content.
+- 🔢 **Live word & character count** — the editor shows up-to-date stats for the current note as you type.
+- ⬇️ **Export as `.md`** — download the current note as a Markdown file with one click.
 - 🌓 **Light / dark theme** — toggle themes; your choice is remembered.
 - 💾 **Local persistence** — notes are stored in `localStorage`, so they survive reloads.
 - 🛡️ **Safe rendering** — Markdown is parsed with [`marked`](https://marked.js.org)
