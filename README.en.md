@@ -10,8 +10,6 @@
 <a href="README.es.md"><img src="https://img.shields.io/badge/Español-555555?style=for-the-badge" alt="Español"/></a>
 </div>
 
-![marknote](assets/banner.svg)
-
 [![CI](https://github.com/geoggrigori/marknote/actions/workflows/ci.yml/badge.svg)](https://github.com/geoggrigori/marknote/actions/workflows/ci.yml)
 
 ![screenshot](assets/screenshot.png)
