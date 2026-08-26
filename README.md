@@ -1,35 +1,61 @@
-![marknote](assets/banner.svg)
+<!-- ══════════════════════════ TÍTULO ══════════════════════════ -->
+<div align="center">
+  <img src="docs/title-banner.svg" width="100%" alt="marknote"/>
+</div>
 
-[![CI](https://github.com/geoggrigori/marknote/actions/workflows/ci.yml/badge.svg)](https://github.com/geoggrigori/marknote/actions/workflows/ci.yml)
+<!-- ══════════════════════ IDIOMAS / LANGUAGES ══════════════════════ -->
+<div align="center">
+<a href="README.md"><img src="https://img.shields.io/badge/Português-1987F0?style=for-the-badge" alt="Português"/></a>
+<a href="README.en.md"><img src="https://img.shields.io/badge/English-555555?style=for-the-badge" alt="English"/></a>
+<a href="README.es.md"><img src="https://img.shields.io/badge/Español-555555?style=for-the-badge" alt="Español"/></a>
+</div>
 
-![screenshot](assets/screenshot.png)
+<div align="center">
+  <img src="assets/banner.svg" width="100%" alt="marknote"/>
+</div>
 
-[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)](https://react.dev)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
-[![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)](https://vite.dev)
-[![Vitest](https://img.shields.io/badge/tested%20with-Vitest-6E9F18?logo=vitest&logoColor=white)](https://vitest.dev)
-[![License: MIT](https://img.shields.io/badge/License-MIT-6B2FB5)](#license)
+<h1 align="center">marknote</h1>
+<p align="center"><em>App de notas Markdown rápido, com preview ao vivo lado a lado</em></p>
+<p align="center"><strong>Escreva → preview renderizado em tempo real → tudo salvo automaticamente no navegador</strong></p>
 
-# marknote
+<div align="center">
+<a href="https://github.com/geoggrigori/marknote/actions/workflows/ci.yml"><img src="https://github.com/geoggrigori/marknote/actions/workflows/ci.yml/badge.svg" alt="CI"/></a>
+<img src="https://img.shields.io/badge/React_19-61DAFB?style=flat-square&logo=react&logoColor=black" alt="react"/>
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="ts"/>
+<img src="https://img.shields.io/badge/Vite_8-646CFF?style=flat-square&logo=vite&logoColor=white" alt="vite"/>
+<img src="https://img.shields.io/badge/License-MIT-2E7D32?style=flat-square" alt="license"/>
+</div>
 
-**marknote** is a clean, fast Markdown notes app with a live side-by-side
-preview. Write on the left, see rendered HTML on the right, and have everything
-saved automatically in your browser. No accounts, no backend — just your notes.
+<div align="center">
+<a href="#sobre"><img src="https://img.shields.io/badge/▸_SOBRE-1987F0?style=for-the-badge" alt="sobre"/></a>
+<a href="#funcionalidades"><img src="https://img.shields.io/badge/▸_FUNCIONALIDADES-000000?style=for-the-badge" alt="func"/></a>
+<a href="#arquitetura"><img src="https://img.shields.io/badge/▸_ARQUITETURA-1987F0?style=for-the-badge" alt="arquitetura"/></a>
+<a href="#uso"><img src="https://img.shields.io/badge/▸_USO-000000?style=for-the-badge" alt="uso"/></a>
+</div>
 
-## Features
+<br/>
 
-- 📝 **Live preview** — Markdown is rendered as you type, side by side with the editor.
-- 🗂️ **Note management** — create, select, edit, and delete notes from the sidebar.
-- 🔍 **Full-text search** — instantly filter notes by title or body content.
-- 🔢 **Live word & character count** — the editor shows up-to-date stats for the current note as you type.
-- ⬇️ **Export as `.md`** — download the current note as a Markdown file with one click.
-- 🌓 **Light / dark theme** — toggle themes; your choice is remembered.
-- 💾 **Local persistence** — notes are stored in `localStorage`, so they survive reloads.
-- 🛡️ **Safe rendering** — Markdown is parsed with [`marked`](https://marked.js.org)
-  and sanitized with [`DOMPurify`](https://github.com/cure53/DOMPurify) to prevent XSS.
-- ⚡ **Tiny & fast** — built with React, TypeScript, and Vite.
+> 💾 **Sem conta, sem backend.** Tudo fica salvo no `localStorage` do seu navegador — nada é enviado a lugar nenhum.
 
-## Architecture
+<div align="center">
+  <img src="assets/screenshot.png" width="100%" alt="marknote — preview ao vivo"/>
+</div>
+
+## Sobre
+
+**marknote** é um app de notas Markdown limpo e rápido, com preview lado a lado ao vivo. Escreva à esquerda, veja o HTML renderizado à direita, com tudo salvo automaticamente no navegador.
+
+## Funcionalidades
+
+- 📝 **Preview ao vivo** — Markdown renderizado enquanto você digita.
+- 🗂️ **Gestão de notas** — criar, selecionar, editar e excluir pela sidebar.
+- 🔍 **Busca full-text** — filtra notas por título ou conteúdo instantaneamente.
+- 🔢 **Contagem de palavras/caracteres** ao vivo.
+- ⬇️ **Exportar como `.md`** com um clique.
+- 🌓 **Tema claro/escuro** — sua escolha é lembrada.
+- 🛡️ **Renderização segura** — Markdown parseado com [`marked`](https://marked.js.org) e sanitizado com [`DOMPurify`](https://github.com/cure53/DOMPurify) contra XSS.
+
+## Arquitetura
 
 ```mermaid
 flowchart TD
@@ -37,67 +63,40 @@ flowchart TD
     App --> Sidebar[Sidebar]
     App --> Editor[Editor]
     App --> Preview[Preview]
-    App --> useNotes[useNotes hook]
-    App --> useTheme[useTheme hook]
-    Sidebar -->|select / create / delete / search| useNotes
-    Editor -->|edit body| useNotes
+    App --> useNotes[hook useNotes]
+    App --> useTheme[hook useTheme]
+    Sidebar -->|selecionar / criar / excluir / buscar| useNotes
+    Editor -->|editar corpo| useNotes
     Preview -->|renderMarkdown + sanitize| Markdown[lib/markdown]
-    useNotes -->|CRUD helpers| Notes[lib/notes]
-    useNotes <-->|load / save| Storage[localStorage]
-    useTheme <-->|persist theme| Storage
+    useNotes -->|helpers CRUD| Notes[lib/notes]
+    useNotes <-->|carregar / salvar| Storage[localStorage]
+    useTheme <-->|persistir tema| Storage
 ```
 
-The UI components are presentational. All note CRUD logic lives in pure,
-testable helpers in `src/lib/notes.ts`, orchestrated by the `useNotes` hook,
-which also handles persistence through `src/lib/storage.ts`. Markdown rendering
-and sanitization are isolated in `src/lib/markdown.ts`.
+Os componentes de UI são apresentacionais. Toda a lógica CRUD de notas vive em helpers puros e testáveis em `src/lib/notes.ts`, orquestrados pelo hook `useNotes`, que também cuida da persistência via `src/lib/storage.ts`.
 
-## Installation
+## Uso
 
 ```bash
 git clone https://github.com/geoggrigori/marknote.git
 cd marknote
 npm install
-```
-
-## Usage
-
-Start the development server:
-
-```bash
 npm run dev
 ```
 
-Then open the printed URL (usually <http://localhost:5173>). On first launch a
-couple of sample notes are seeded so you have something to explore.
-
-## Build
+Abra a URL impressa (geralmente `http://localhost:5173`). Na primeira execução, algumas notas de exemplo são criadas automaticamente.
 
 ```bash
-npm run build    # type-check and produce an optimized build in dist/
-npm run preview  # preview the production build locally
+npm run build     # type-check + build otimizado em dist/
+npm run test      # testes (Vitest + Testing Library)
 ```
 
-## How persistence works
+## Licença
 
-Notes are kept in React state and mirrored to the browser's `localStorage`
-under the key `marknote.notes.v1` whenever they change. On load, marknote reads
-that key; if it is empty (a first visit), it seeds a small set of welcome notes.
-The selected theme is stored separately under `marknote.theme`. Because storage
-is per-browser, your notes stay on your machine — nothing is sent anywhere.
+[MIT](LICENSE).
 
-## Running tests
+<div align="center">
+  <img src="https://file.loading.io/color/feature/thumb/Blues-8.png?" width="100%" height="10px" alt="divider"/>
+</div>
 
-Tests use [Vitest](https://vitest.dev) with
-[Testing Library](https://testing-library.com) and jsdom. They cover the note
-CRUD helpers, search filtering, the `useNotes` hook, and Markdown rendering /
-sanitization (including a malicious-input case).
-
-```bash
-npm run test -- --run   # run once
-npm run test            # watch mode
-```
-
-## License
-
-Released under the [MIT License](LICENSE). © 2026 Geovana Grigorio.
+<p align="center"><sub>Desenvolvido por <strong><a href="https://github.com/geoggrigori">Grigori</a></strong> · 2026</sub></p>
