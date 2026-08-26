@@ -10,10 +10,6 @@
 <a href="README.es.md"><img src="https://img.shields.io/badge/Español-555555?style=for-the-badge" alt="Español"/></a>
 </div>
 
-<div align="center">
-  <img src="assets/banner.svg" width="100%" alt="marknote"/>
-</div>
-
 <h1 align="center">marknote</h1>
 <p align="center"><em>App de notas Markdown rápido, com preview ao vivo lado a lado</em></p>
 <p align="center"><strong>Escreva → preview renderizado em tempo real → tudo salvo automaticamente no navegador</strong></p>
