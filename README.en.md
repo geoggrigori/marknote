@@ -24,8 +24,6 @@
 [![Vitest](https://img.shields.io/badge/tested%20with-Vitest-6E9F18?logo=vitest&logoColor=white)](https://vitest.dev)
 [![License: MIT](https://img.shields.io/badge/License-MIT-6B2FB5)](#license)
 
-# marknote
-
 **marknote** is a clean, fast Markdown notes app with a live side-by-side
 preview. Write on the left, see rendered HTML on the right, and have everything
 saved automatically in your browser. No accounts, no backend — just your notes.
