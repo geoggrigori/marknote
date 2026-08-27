@@ -14,10 +14,6 @@
 
 <br/>
 
-<h1 align="center">marknote</h1>
-<p align="center"><em>App de notas Markdown rápido, com preview ao vivo lado a lado</em></p>
-<p align="center"><strong>Escreva → preview renderizado em tempo real → tudo salvo automaticamente no navegador</strong></p>
-
 <div align="center">
 <a href="https://github.com/geoggrigori/marknote/actions/workflows/ci.yml"><img src="https://github.com/geoggrigori/marknote/actions/workflows/ci.yml/badge.svg" alt="CI"/></a>
 <img src="https://img.shields.io/badge/React_19-61DAFB?style=flat-square&logo=react&logoColor=black" alt="react"/>
